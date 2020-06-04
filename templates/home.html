@@ -1,0 +1,71 @@
+
+<h1 style="text-align: center"> Welcome Home </h1>
+
+    <table align="center" border="2">
+        <tr>
+            <th colspan="2"><h2 style="text-align: center;color: red">User Information</h2></th>
+        </tr>
+
+        <tr>
+            <th colspan="2"><h3 style="text-align: right;color: blue">
+            <a href="{% url 'update' user.id %}">
+                Update Profile
+            </a>
+            </h3></th>
+        </tr>
+        <tr>
+            <th>Name </th>
+            <th>{{ user }} </th>
+        </tr>
+
+        <tr>
+            <th>User Id</th>
+            <th>{{ user.id }}</th>
+        </tr>
+
+        <tr>
+            <th>First Name</th>
+            <th>{{ user.first_name }}</th>
+        </tr>
+
+         <tr>
+            <th>Last Name</th>
+            <th>{{ user.last_name }}</th>
+        </tr>
+
+        <tr>
+            <th>Email-ID</th>
+            <th>{{ user.email }}</th>
+        </tr>
+        <tr>
+            <th>Is Staff</th>
+            <th>{{ user.is_staff }}</th>
+        </tr>
+
+        <tr>
+            <th>Is Active</th>
+            <th>{{ user.is_active }}</th>
+        </tr>
+
+         <tr>
+            <th>Date of Join</th>
+            <th>{{ user.date_joined }}</th>
+        </tr>
+
+         <tr>
+            <th>Last login</th>
+            <th>{{ user.last_login }}</th>
+        </tr>
+
+        <tr>
+            <th>Username</th>
+            <th>{{ user.username }}</th>
+        </tr>
+
+        <tr>
+            <th>Password</th>
+            <th>{{ user.password }}</th>
+        </tr>
+    </table>
+
+<a href="{% url 'logout' %}"><h3>Log out</h3></a>
